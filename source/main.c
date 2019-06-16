@@ -107,14 +107,14 @@ int main(int argc, char **argv)
 
     fprintf(log_f, "Opening nereba.bin\n");
     struct stat file_stat;
-    if(stat("sdmc:/nereba/nereba.bin", &file_stat) < 0)
+    if(stat("sdmc:/atmosphere/reboot_payload.bin", &file_stat) < 0)
     {
         fprintf(log_f, "Failed to get payload size!\nMake sure nereba.bin is in the nereba folder on the SD card!\n");
         fclose(log_f);
         fatalSimple(MAKERESULT(MODULE_NEREBA, 4));
     }
 
-    FILE *payload_f = fopen("sdmc:/nereba/nereba.bin", "rb");
+    FILE *payload_f = fopen("sdmc:/atmosphere/reboot_payload.bin", "rb");
     if(!payload_f)
     {
         fprintf(log_f, "Failed to open payload!\n");
