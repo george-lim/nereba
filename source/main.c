@@ -85,7 +85,7 @@ int main(int argc, char **argv)
 
     setlinebuf(log_f); //set line buffered mode so the file updates on every newline.
 
-    fprintf(log_f, "Nereba v0.1 by stuckpixel\n");
+    fprintf(log_f, "Nereba v0.3 by stuckpixel\n");
 
     Result rc = fetch_io_regs();
 
